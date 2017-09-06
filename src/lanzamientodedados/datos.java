@@ -66,25 +66,24 @@ public class datos {
      public void numericos()
     {
         Scanner teclado=new Scanner(System.in);
-        int suma=0,valor,total=0,pares=0, i=0;
-            System.out.print("Ingrese valor:");
-            valor=teclado.nextInt();
-            
-           while(valor<5){
-               
-               if (valor%2==0){
-            System.out.println("El número es par");
-            i++;
+         int ingresado=0;
+        int suma=0;
+        int intentos=0;
+        
+        while(intentos<5){
+        System.out.println("Ingrese un valor: ");
+        ingresado = teclado.nextInt();
+        
+          if(ingresado>=20){
+            suma=suma+ingresado;
+        }else{
+          System.out.println("Ingrese un numero mayor a 20");}
+            if (ingresado%2==0){
+            intentos++;
+            System.out.println("Es par "+intentos+ "/5");
             }
-            if(valor>20){
-                 suma=suma+valor;
-            
-            }else{ System.out.println("El numero tiene que ser mayor a 20");     
-            }
-         }
-          total=suma;
-          System.out.print("La suma es:");
-          System.out.println(total);
+        }
+        System.out.print("La suma es:"+suma);
  }
       //-------PIRAMIDES--------------
       public void piramide()
